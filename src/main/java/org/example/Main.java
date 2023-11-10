@@ -10,6 +10,9 @@ public class Main {
         String fileName = args[0];
         try (BufferedReader br = new BufferedReader(new FileReader(RESSOURCE_PATH + fileName))) {
             String line;
+            String[] plateauSize = br.readLine().split(" ");
+            int plateauX = Integer.parseInt(plateauSize[0]);
+            int plateauY = Integer.parseInt(plateauSize[1]);
 
             while ((line = br.readLine()) != null) {
                 String[] roverPosition = line.split(" ");
